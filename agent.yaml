@@ -21,6 +21,11 @@ spec:
         - name: azure-pipelines-agent
           image: "index.docker.io/tjackadams/dockeragent:latest"
           env:
+            - name: AZP_AGENT_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name
             - name: AZP_URL
               valueFrom:
                 secretKeyRef:
