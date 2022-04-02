@@ -1,0 +1,9 @@
+pool:
+  name: k8s
+
+steps:
+- checkout: none
+- script: |
+    waiting for completion
+    sleep 30
+  displayName: 'wait 30 seconds'
